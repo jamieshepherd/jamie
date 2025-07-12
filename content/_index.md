@@ -1,6 +1,8 @@
-+++
-title = "Hi"
-+++
+---
+title: "Hi"
+aliases:
+  - /about
+---
 
 # Hi!
 

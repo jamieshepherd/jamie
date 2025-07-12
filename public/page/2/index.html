@@ -177,10 +177,10 @@
     
       <article class="post on-list">
         <h2 class="post-title">
-          <a href="https://jamie.sh/posts/zola-to-astro/">Zola to.. Astro?</a>
+          <a href="https://jamie.sh/posts/a-rough-plan/">A rough plan</a>
         </h2>
 
-        <div class="post-meta"><time class="post-date">2023-01-13</time></div>
+        <div class="post-meta"><time class="post-date">2020-06-01</time></div>
 
         
 
@@ -189,24 +189,23 @@
 
         <div class="post-content">
           
-            <h2 id="2023">2023</h2>
-<p>Every year at some point I like to give my website a little revamp. It&rsquo;s usually around January when I&rsquo;m full of motivation and creativity - and I tell myself I&rsquo;ll actually commit to writing more often. Writing really helps me solidify my thoughts and learning, so it&rsquo;s usually a well-intentioned spur of motiviation. Inevitably - as the year goes on and as work and family life gets in the way, this goal often gets side-tracked.</p>
+            <p>To get started, I want to first outline my goals for the foreseeable future. In my first post, I mentioned that I have limited time to spend on my game dev ambitions so it&rsquo;s important that the hours I do spend are productive. I watched a <a href="https://youtu.be/g5f7yixtQPc">GDC talk by David Wehle</a> (<a href="https://www.thefirsttree.com/">The First Tree</a>) who mentioned he spent roughly 10 hours a week on his game, due to work commitments and real-life - and that he never had a 0% day. Every day should have <em>some</em> progress, no matter how small. These are tenets I&rsquo;d like to follow.</p>
           
         </div>
 
         
           <div>
-            <a class="read-more button inline" href="/posts/zola-to-astro/">[Read more]</a>
+            <a class="read-more button inline" href="/posts/a-rough-plan/">[Read more]</a>
           </div>
         
       </article>
     
       <article class="post on-list">
         <h2 class="post-title">
-          <a href="https://jamie.sh/posts/wordpress-to-zola/">Wordpress to Zola</a>
+          <a href="https://jamie.sh/posts/game-development-a-beginning/">Game development: A beginning</a>
         </h2>
 
-        <div class="post-meta"><time class="post-date">2022-07-29</time></div>
+        <div class="post-meta"><time class="post-date">2020-06-01</time></div>
 
         
 
@@ -215,24 +214,24 @@
 
         <div class="post-content">
           
-            <h2 id="some-background">Some background</h2>
-<p>I recently migrated my personal website from <a href="https://wordpress.org">WordPress</a> to <a href="https://getzola.org">Zola</a>, a Rust-powered static site generator. I&rsquo;ve used static site generators in past versions of this site - but opted for WordPress in the 2020-2021 version because static sites do come with <em>some</em> extra manual work no matter how you cut it. WordPress with its online admin interface abstracts a lot of that away - and it&rsquo;s genuinely a pleasurable experience to actually write and publish.</p>
+            <p>When I was in my early twenties - with not much going on in my life - I decided to make a change. I remember being in my parents garden on a sunny day kicking a ball around with Ziggy, the dog. I didn&rsquo;t know what I wanted to do with my life, I&rsquo;d quit my job and spent most of my days sleeping and playing video games.</p>
+<p>I used my first computer at age 5, a Windows 95 machine my parents were eager to show off. Having a computer in 1995 was an expensive endeavor, and we were not from an affluent area - so this was a big deal. One of my earliest memories was waking up in the early hours to find my parents setting up the new computer, not expecting us to use it until morning.</p>
           
         </div>
 
         
           <div>
-            <a class="read-more button inline" href="/posts/wordpress-to-zola/">[Read more]</a>
+            <a class="read-more button inline" href="/posts/game-development-a-beginning/">[Read more]</a>
           </div>
         
       </article>
     
       <article class="post on-list">
         <h2 class="post-title">
-          <a href="https://jamie.sh/posts/experimentation/">Experimentation</a>
+          <a href="https://jamie.sh/posts/games-that-shaped-me/">Games that shaped me</a>
         </h2>
 
-        <div class="post-meta"><time class="post-date">2021-05-31</time></div>
+        <div class="post-meta"><time class="post-date">2020-06-01</time></div>
 
         
 
@@ -241,65 +240,16 @@
 
         <div class="post-content">
           
-            <p>It&rsquo;s been a while since I last wrote anything about game development. I often think about writing something new I&rsquo;ve learned or an idea I had along the way - but never do.</p>
-<p>I do however think there is value in writing - even if I&rsquo;m writing into the void. Writing thoughts down is a good way of solidifying thoughts. You can be retrospective and even learn something new along the way. I&rsquo;m going to try to post more regularly - even if the only goal is to see my progress over time in my constant game experimentation.</p>
+            <p>Here are some games that I really enjoyed - they aren&rsquo;t necessarily inspiration for my current project - but games that inspired me and captured my imagination (and time). I expect to add to this list over time.</p>
+<h3 id="ecco-the-dolphin">Ecco the Dolphin</h3>
+<p>One of the first games I played. Loved the feeling of diving deeper and deeper into the unknown (might be why I enjoyed Subnautica so much).</p>
+<p><img src="/posts/games-that-shaped-me/ecco.jpg" alt="Ecco The Dolphin"></p>
           
         </div>
 
         
           <div>
-            <a class="read-more button inline" href="/posts/experimentation/">[Read more]</a>
-          </div>
-        
-      </article>
-    
-      <article class="post on-list">
-        <h2 class="post-title">
-          <a href="https://jamie.sh/posts/unity-dots-nativearray-defaults/">Unity DOTS NativeArray defaults</a>
-        </h2>
-
-        <div class="post-meta"><time class="post-date">2020-06-16</time></div>
-
-        
-
-        
-
-
-        <div class="post-content">
-          
-            <p>I wanted to create a set of chunks in a grid along the X + Z axis in Unity (with the power of DOTS). To track which chunks I have already instantiated, I created a <code>NativeArray&lt;float3&gt;</code> named <code>chunkPositions</code>. I set the size of this array to my world size (width by height) and I have a job that loops through all of the positions on the screen, checking which exist in <code>chunkPositions</code>. If the position does not exist, I can create a new chunk there.</p>
-          
-        </div>
-
-        
-          <div>
-            <a class="read-more button inline" href="/posts/unity-dots-nativearray-defaults/">[Read more]</a>
-          </div>
-        
-      </article>
-    
-      <article class="post on-list">
-        <h2 class="post-title">
-          <a href="https://jamie.sh/posts/phase-discovery/">Phase: Discovery</a>
-        </h2>
-
-        <div class="post-meta"><time class="post-date">2020-06-07</time></div>
-
-        
-
-        
-
-
-        <div class="post-content">
-          
-            <p>I&rsquo;ve had a lot of thoughts as to what my game might be, and I have some interesting ideas of cool gameplay mechanics. When approaching new projects (not just in game dev) I always have a general &ldquo;feeling&rdquo; of what I&rsquo;m trying to build. I can&rsquo;t always visualize or explain the feeling, but I&rsquo;d be able to tell you if I saw it.</p>
-<p>Over the past week in my evenings I&rsquo;ve been looking at procedural generation in both Unity and Unreal - exploring the options available to me here. Unity&rsquo;s DOTS stack is very interesting, but there are some holes in both my knowledge and their current implementation which make my goals challenging.</p>
-          
-        </div>
-
-        
-          <div>
-            <a class="read-more button inline" href="/posts/phase-discovery/">[Read more]</a>
+            <a class="read-more button inline" href="/posts/games-that-shaped-me/">[Read more]</a>
           </div>
         
       </article>
@@ -308,11 +258,11 @@
     <div class="pagination">
   <div class="pagination__buttons">
     
-    
-    
-      <a href="/page/2/" class="button inline next">
-        [<span class="button__text">Older posts</span>] &gt;
+      <a href="/" class="button inline prev">
+        &lt; [<span class="button__text">Newer posts</span>]
       </a>
+    
+    
     
   </div>
 </div>
