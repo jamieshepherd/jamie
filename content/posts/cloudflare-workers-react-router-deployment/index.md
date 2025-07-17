@@ -2,6 +2,7 @@
 date = '2025-07-17'
 location = 'SAN FRANCISCO, CALIFORNIA'
 title = 'React Router v7, Vite, and Cloudflare Workers'
+bsky = "https://bsky.app/profile/jamie.sh/post/3lu6rfqphs227"
 +++
 
 I wanted to build a fun little project. That project was [spacetime](https://spacetime.cv).

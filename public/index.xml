@@ -16,6 +16,13 @@
       <description>&lt;p&gt;I wanted to build a fun little project. That project was &lt;a href=&#34;https://spacetime.cv&#34;&gt;spacetime&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;I actually built most of it over a couple days, and over the decades I&amp;rsquo;ve gotten pretty good at spinning up full-stack web apps from idea to deployment quickly. This time, I wanted a mostly SPA experience, but I&amp;rsquo;d use Supabase on the backend to try and escape as much API code as I could. I ended up wanting to call OpenAI to generate embeddings, and the Supabase Edge Functions DX with Deno was really frustrating.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Spacetime</title>
+      <link>http://localhost:1313/experiments/spacetime/</link>
+      <pubDate>Thu, 17 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/experiments/spacetime/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://spacetime.cv&#34;&gt;https://spacetime.cv&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Explore thoughts across space and time.&lt;/p&gt;&#xA;&lt;h3 id=&#34;technologies-used&#34;&gt;Technologies used:&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-md&#34; data-lang=&#34;md&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; React&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; React Router v7&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; ThreeJS (React Three Fiber)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Motion&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Cloudflare Workers&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
       <title>Zola to.. Astro?</title>
       <link>http://localhost:1313/posts/zola-to-astro/</link>
       <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
