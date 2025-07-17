@@ -1,10 +1,9 @@
----
-title: "Games that shaped me"
-date: 2020-06-01
-location: "SAN FRANCISCO, CALIFORNIA"
-aliases:
-  - /logs/games-that-shaped-me
----
++++
+aliases = ['/logs/games-that-shaped-me']
+date = '2020-06-01'
+location = 'SAN FRANCISCO, CALIFORNIA'
+title = 'Games that shaped me'
++++
 
 Here are some games that I really enjoyed - they aren't necessarily inspiration for my current project - but games that inspired me and captured my imagination (and time). I expect to add to this list over time.
 

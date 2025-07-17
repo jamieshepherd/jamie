@@ -1,10 +1,9 @@
----
-title: "Unity DOTS NativeArray defaults"
-date: 2020-06-16
-location: "SAN FRANCISCO, CALIFORNIA"
-aliases:
-  - /logs/unity-dots-nativearray-defaults
----
++++
+aliases = ['/logs/unity-dots-nativearray-defaults']
+date = '2020-06-16'
+location = 'SAN FRANCISCO, CALIFORNIA'
+title = 'Unity DOTS NativeArray defaults'
++++
 
 I wanted to create a set of chunks in a grid along the X \+ Z axis in Unity (with the power of DOTS). To track which chunks I have already instantiated, I created a `NativeArray<float3>` named `chunkPositions`. I set the size of this array to my world size (width by height) and I have a job that loops through all of the positions on the screen, checking which exist in `chunkPositions`. If the position does not exist, I can create a new chunk there.
 

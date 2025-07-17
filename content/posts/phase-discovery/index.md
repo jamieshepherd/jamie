@@ -1,10 +1,9 @@
----
-title: "Phase: Discovery"
-date: 2020-06-07
-location: "SAN FRANCISCO, CALIFORNIA"
-aliases:
-  - /logs/phase-discovery
----
++++
+aliases = ['/logs/phase-discovery']
+date = '2020-06-07'
+location = 'SAN FRANCISCO, CALIFORNIA'
+title = 'Phase: Discovery'
++++
 
 I've had a lot of thoughts as to what my game might be, and I have some interesting ideas of cool gameplay mechanics. When approaching new projects (not just in game dev) I always have a general "feeling" of what I'm trying to build. I can't always visualize or explain the feeling, but I'd be able to tell you if I saw it.
 

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  
+    <title>React Router v7, Vite, and Cloudflare Workers :: Jamie.sh</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="I wanted to build a fun little project. That project was spacetime.
+I actually built most of it over a couple days, and over the decades I&rsquo;ve gotten pretty good at spinning up full-stack web apps from idea to deployment quickly. This time, I wanted a mostly SPA experience, but I&rsquo;d use Supabase on the backend to try and escape as much API code as I could. I ended up wanting to call OpenAI to generate embeddings, and the Supabase Edge Functions DX with Deno was really frustrating.
+" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="http://localhost:1313/posts/cloudflare-workers-react-router-deployment/" />
+
+
+
+
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/code.min.d529ea4b2fb8d34328d7d31afc5466d5f7bc2f0bc9abdd98b69385335d7baee4.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/footer.min.eb8dfc2c6a7eafa36cd3ba92d63e69e849e2200e0002a228d137f236b09ecd75.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/header.min.75c7eb0e2872d95ff48109c6647d0223a38db52e2561dd87966eb5fc7c6bdac6.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/main.min.775ac2af004d44c22a6d000fbd1d9af529642f5cef27399d0280d180af2c2e9b.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/menu.min.310d32205bdedd6f43144e3c3273c9deecd238eba5f9108db5ea96ca0cfbe377.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/pagination.min.bbb986dbce00a5ce5aca0504b7925fc1c581992a4bf57f163e5d69cc1db7d836.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/post.min.ad50c7f4d00e7975918f37fc74c6029e1959a40d66fb5b2c6564a8715e985573.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/syntax.min.e9ab635cf918bc84b901eb65c0b2caa74c9544245e3647c1af5c129896ef276e.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/terminal.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+
+
+
+<link rel="shortcut icon" href="http://localhost:1313/favicon.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="jamie.sh" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="React Router v7, Vite, and Cloudflare Workers">
+<meta property="og:description" content="I wanted to build a fun little project. That project was spacetime.
+I actually built most of it over a couple days, and over the decades I&rsquo;ve gotten pretty good at spinning up full-stack web apps from idea to deployment quickly. This time, I wanted a mostly SPA experience, but I&rsquo;d use Supabase on the backend to try and escape as much API code as I could. I ended up wanting to call OpenAI to generate embeddings, and the Supabase Edge Functions DX with Deno was really frustrating.
+" />
+<meta property="og:url" content="http://localhost:1313/posts/cloudflare-workers-react-router-deployment/" />
+<meta property="og:site_name" content="Jamie.sh" />
+
+  <meta property="og:image" content="http://localhost:1313/og-image.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+  <meta property="article:published_time" content="2025-07-17 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Jamie.sh
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/experiments">Experiments</a></li>
+        
+      
+        
+          <li><a href="/posts">Posts</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/experiments" >Experiments</a></li>
+        
+      
+        
+          <li><a href="/posts" >Posts</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="http://localhost:1313/posts/cloudflare-workers-react-router-deployment/">React Router v7, Vite, and Cloudflare Workers</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2025-07-17</time></div>
+
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <p>I wanted to build a fun little project. That project was <a href="https://spacetime.cv">spacetime</a>.</p>
+<p>I actually built most of it over a couple days, and over the decades I&rsquo;ve gotten pretty good at spinning up full-stack web apps from idea to deployment quickly. This time, I wanted a mostly SPA experience, but I&rsquo;d use Supabase on the backend to try and escape as much API code as I could. I ended up wanting to call OpenAI to generate embeddings, and the Supabase Edge Functions DX with Deno was really frustrating.</p>
+<p>For larger projects, I&rsquo;d probably throw together a quick CRUD API in Go - but I really wanted to keep this small and self contained, so I bolted React Router on top so I could take advantage of server-side actions and create a pseudo-API within the same application.</p>
+<p>I&rsquo;ve used a variation of Cloudflare Pages, Netlify, or GitHub pages in the past for simple, free deployment - but Cloudflare this time was suggesting I use Cloudflare Workers to deploy my React Router based app. It&rsquo;s &ldquo;newer&rdquo; and &ldquo;supports more stuff&rdquo; or something.</p>
+<p>Turns out, I couldn&rsquo;t just plug in my repository and let it go to work like I could with Cloudflare Pages, and I had to end up pulling out some parts from Cloudflare&rsquo;s <a href="https://github.com/cloudflare/templates/tree/main/react-router-starter-template">react router template</a> to make it go. This included some new files:</p>
+<pre tabindex="0"><code>- app/
+    - entry.server.tsx
+- workers/
+    - app.ts
+- tsconfig.cloudflare.json
+- wrangler.json
+</code></pre><p>some updates to some existing files:</p>
+<pre tabindex="0"><code>- react-router.config.ts
+- tsconfig.json
+- tsconfig.node.json
+- vite.config.ts
+</code></pre><p>and also some new packages in our package.json.</p>
+<p>This seems like a lot of work to &ldquo;make things go&rdquo;, and it also meant that my local development would change to use Cloudflare&rsquo;s wrangler as well. Functionally, there&rsquo;s not a lot of difference in the DX here - but it&rsquo;s not quite as plug-in-and-go as I would have liked. Starting a new project from this template makes sense, but converting a project was pretty clunky.</p>
+<h2 id="environment-variables">Environment variables<a href="#environment-variables" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>In React Router/Vite, I&rsquo;d just throw my local variables into an <code>.env.local</code> file and things would &ldquo;just work&rdquo;. For the public facing variables, you would just prefix them with VITE*. In my app I had my <code>VITE_SUPABASE_URL</code> and <code>VITE_SUPABASE_ANON_KEY</code>, which I wanted to be publically available so the client could call Supabase. I also wanted those to be available on the server, so that my server could call Supabase - but my server would also occasionally call OpenAI with the OPENAI_API_KEY variable (which for obvious reasons should not be public).</p>
+<p>I pretty distinctly remember this part being easier in the past. Cloudflare&rsquo;s documentation has a bunch of nonsense here to work within their ecosystem, even ChatGPT suggested some overkill things. I really wanted just wanted to make this thing go - with minimal changes, so here&rsquo;s what I ended up with.</p>
+<h3 id="devvars">.dev.vars<a href="#devvars" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Cloudflare will look for a <code>.dev.vars</code> file for local development. There is some documentation around how you might use this for different environments, but if you don&rsquo;t care - you can essentially rename <code>.env.local</code> to <code>.dev.vars</code> and your local development will be the same. Don&rsquo;t forget to .gitignore these so you don&rsquo;t commit them to source control.</p>
+<h3 id="wranglerjson">wrangler.json<a href="#wranglerjson" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<pre tabindex="0"><code>&#34;vars&#34;: {
+    &#34;VITE_SUPABASE_URL&#34;: &#34;https://cdgnfaxfwxjbvntadvbm.supabase.co&#34;,
+    &#34;VITE_SUPABASE_ANON_KEY&#34;: &#34;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9....&#34;
+}
+</code></pre><p>For production, I put my public keys in the vars section of wrangler.json. These are keys that you don&rsquo;t mind ending up in source control - so you&rsquo;ll notice my OPENAI_API_KEY is not listed here. These keys will end up in the Cloudflare dashboard under Settings &gt; Variable and Secrets - and reflect the variables that will be available to your worker at runtime. For me, that&rsquo;s any of the code running on the server (my pseudo-API routes). I also want my OpenAI API key to be available to those routes, so I added it directly via the Cloudflare Dashboard (Type: Secret).</p>
+<h3 id="build-variables">Build variables<a href="#build-variables" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>For the <code>VITE_</code> public keys that the client uses - these are built into your production code during the build step. There&rsquo;s actually a &ldquo;beta&rdquo; section in the Cloudflare Dashboard under Settings &gt; Build &gt; Variables and secrets that allow you define variables that should be available during the build process.</p>
+<h2 id="micro-conclusion">Micro conclusion<a href="#micro-conclusion" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>I miss dragging folders into FileZilla and calling things deployed. I like things being simple, this was a little bit convoluted - but it works, and it&rsquo;ll work for my purposes. Hopefully if you&rsquo;re reading this - it was helpful for you too. A lot of this stuff is in beta and changing all the time - so check the date of this post if you&rsquo;re following along and make sure it&rsquo;s still recent!</p>
+<p>That&rsquo;s all for now folks!</p>
+
+      </div></div>
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+    
+    
+      <a href="http://localhost:1313/posts/zola-to-astro/" class="button inline next">
+         [<span class="button__text">Zola to.. Astro?</span>] &gt;
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2025 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

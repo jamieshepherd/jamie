@@ -1,10 +1,9 @@
----
-title: "Experimentation"
-date: 2021-05-31
-location: "SAN FRANCISCO, CALIFORNIA"
-aliases:
-  - /logs/experimentation
----
++++
+aliases = ['/logs/experimentation']
+date = '2021-05-31'
+location = 'SAN FRANCISCO, CALIFORNIA'
+title = 'Experimentation'
++++
 
 It's been a while since I last wrote anything about game development. I often think about writing something new I've learned or an idea I had along the way - but never do.
 

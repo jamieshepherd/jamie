@@ -1,10 +1,9 @@
----
-title: "Zola to.. Astro?"
-date: 2023-01-13
-location: "SAN FRANCISCO, CALIFORNIA"
-aliases:
-  - /logs/zola-to-astro
----
++++
+aliases = ['/logs/zola-to-astro']
+date = '2023-01-13'
+location = 'SAN FRANCISCO, CALIFORNIA'
+title = 'Zola to.. Astro?'
++++
 
 ## 2023
 

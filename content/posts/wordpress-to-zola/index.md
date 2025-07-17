@@ -1,10 +1,9 @@
----
-title: "Wordpress to Zola"
-date: 2022-07-29
-location: "SAN FRANCISCO, CALIFORNIA"
-aliases:
-  - /logs/wordpress-to-zola
----
++++
+aliases = ['/logs/wordpress-to-zola']
+date = '2022-07-29'
+location = 'SAN FRANCISCO, CALIFORNIA'
+title = 'Wordpress to Zola'
++++
 
 ## Some background
 

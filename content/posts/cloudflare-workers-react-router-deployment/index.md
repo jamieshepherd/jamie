@@ -1,8 +1,8 @@
----
-title: "React Router v7, Vite, and Cloudflare Workers"
-date: 2025-07-17
-location: "SAN FRANCISCO, CALIFORNIA"
----
++++
+date = '2025-07-17'
+location = 'SAN FRANCISCO, CALIFORNIA'
+title = 'React Router v7, Vite, and Cloudflare Workers'
++++
 
 I wanted to build a fun little project. That project was [spacetime](https://spacetime.cv).
 

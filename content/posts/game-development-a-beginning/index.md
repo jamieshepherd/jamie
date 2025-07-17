@@ -1,10 +1,9 @@
----
-title: "Game development: A beginning"
-date: 2020-06-01
-location: "SAN FRANCISCO, CALIFORNIA"
-aliases:
-  - /logs/game-development-a-beginning
----
++++
+aliases = ['/logs/game-development-a-beginning']
+date = '2020-06-01'
+location = 'SAN FRANCISCO, CALIFORNIA'
+title = 'Game development: A beginning'
++++
 
 When I was in my early twenties - with not much going on in my life - I decided to make a change. I remember being in my parents garden on a sunny day kicking a ball around with Ziggy, the dog. I didn't know what I wanted to do with my life, I'd quit my job and spent most of my days sleeping and playing video games.
 

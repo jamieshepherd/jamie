@@ -1,10 +1,9 @@
----
-title: "A rough plan"
-date: 2020-06-01
-location: "SAN FRANCISCO, CALIFORNIA"
-aliases:
-  - /logs/a-rough-plan
----
++++
+aliases = ['/logs/a-rough-plan']
+date = '2020-06-01'
+location = 'SAN FRANCISCO, CALIFORNIA'
+title = 'A rough plan'
++++
 
 To get started, I want to first outline my goals for the foreseeable future. In my first post, I mentioned that I have limited time to spend on my game dev ambitions so it's important that the hours I do spend are productive. I watched a [GDC talk by David Wehle](https://youtu.be/g5f7yixtQPc) ([The First Tree](https://www.thefirsttree.com/)) who mentioned he spent roughly 10 hours a week on his game, due to work commitments and real-life - and that he never had a 0% day. Every day should have _some_ progress, no matter how small. These are tenets I'd like to follow.
 

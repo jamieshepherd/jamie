@@ -2,67 +2,74 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hi on Jamie.sh</title>
-    <link>https://jamie.sh/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content in Hi on Jamie.sh</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Jan 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://jamie.sh/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>React Router v7, Vite, and Cloudflare Workers</title>
+      <link>http://localhost:1313/posts/cloudflare-workers-react-router-deployment/</link>
+      <pubDate>Thu, 17 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/cloudflare-workers-react-router-deployment/</guid>
+      <description>&lt;p&gt;I wanted to build a fun little project. That project was &lt;a href=&#34;https://spacetime.cv&#34;&gt;spacetime&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;I actually built most of it over a couple days, and over the decades I&amp;rsquo;ve gotten pretty good at spinning up full-stack web apps from idea to deployment quickly. This time, I wanted a mostly SPA experience, but I&amp;rsquo;d use Supabase on the backend to try and escape as much API code as I could. I ended up wanting to call OpenAI to generate embeddings, and the Supabase Edge Functions DX with Deno was really frustrating.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Zola to.. Astro?</title>
-      <link>https://jamie.sh/posts/zola-to-astro/</link>
+      <link>http://localhost:1313/posts/zola-to-astro/</link>
       <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://jamie.sh/posts/zola-to-astro/</guid>
+      <guid>http://localhost:1313/posts/zola-to-astro/</guid>
       <description>&lt;h2 id=&#34;2023&#34;&gt;2023&lt;/h2&gt;&#xA;&lt;p&gt;Every year at some point I like to give my website a little revamp. It&amp;rsquo;s usually around January when I&amp;rsquo;m full of motivation and creativity - and I tell myself I&amp;rsquo;ll actually commit to writing more often. Writing really helps me solidify my thoughts and learning, so it&amp;rsquo;s usually a well-intentioned spur of motiviation. Inevitably - as the year goes on and as work and family life gets in the way, this goal often gets side-tracked.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Wordpress to Zola</title>
-      <link>https://jamie.sh/posts/wordpress-to-zola/</link>
+      <link>http://localhost:1313/posts/wordpress-to-zola/</link>
       <pubDate>Fri, 29 Jul 2022 00:00:00 +0000</pubDate>
-      <guid>https://jamie.sh/posts/wordpress-to-zola/</guid>
+      <guid>http://localhost:1313/posts/wordpress-to-zola/</guid>
       <description>&lt;h2 id=&#34;some-background&#34;&gt;Some background&lt;/h2&gt;&#xA;&lt;p&gt;I recently migrated my personal website from &lt;a href=&#34;https://wordpress.org&#34;&gt;WordPress&lt;/a&gt; to &lt;a href=&#34;https://getzola.org&#34;&gt;Zola&lt;/a&gt;, a Rust-powered static site generator. I&amp;rsquo;ve used static site generators in past versions of this site - but opted for WordPress in the 2020-2021 version because static sites do come with &lt;em&gt;some&lt;/em&gt; extra manual work no matter how you cut it. WordPress with its online admin interface abstracts a lot of that away - and it&amp;rsquo;s genuinely a pleasurable experience to actually write and publish.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Experimentation</title>
-      <link>https://jamie.sh/posts/experimentation/</link>
+      <link>http://localhost:1313/posts/experimentation/</link>
       <pubDate>Mon, 31 May 2021 00:00:00 +0000</pubDate>
-      <guid>https://jamie.sh/posts/experimentation/</guid>
+      <guid>http://localhost:1313/posts/experimentation/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s been a while since I last wrote anything about game development. I often think about writing something new I&amp;rsquo;ve learned or an idea I had along the way - but never do.&lt;/p&gt;&#xA;&lt;p&gt;I do however think there is value in writing - even if I&amp;rsquo;m writing into the void. Writing thoughts down is a good way of solidifying thoughts. You can be retrospective and even learn something new along the way. I&amp;rsquo;m going to try to post more regularly - even if the only goal is to see my progress over time in my constant game experimentation.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Unity DOTS NativeArray defaults</title>
-      <link>https://jamie.sh/posts/unity-dots-nativearray-defaults/</link>
+      <link>http://localhost:1313/posts/unity-dots-nativearray-defaults/</link>
       <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>https://jamie.sh/posts/unity-dots-nativearray-defaults/</guid>
+      <guid>http://localhost:1313/posts/unity-dots-nativearray-defaults/</guid>
       <description>&lt;p&gt;I wanted to create a set of chunks in a grid along the X + Z axis in Unity (with the power of DOTS). To track which chunks I have already instantiated, I created a &lt;code&gt;NativeArray&amp;lt;float3&amp;gt;&lt;/code&gt; named &lt;code&gt;chunkPositions&lt;/code&gt;. I set the size of this array to my world size (width by height) and I have a job that loops through all of the positions on the screen, checking which exist in &lt;code&gt;chunkPositions&lt;/code&gt;. If the position does not exist, I can create a new chunk there.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Phase: Discovery</title>
-      <link>https://jamie.sh/posts/phase-discovery/</link>
+      <link>http://localhost:1313/posts/phase-discovery/</link>
       <pubDate>Sun, 07 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>https://jamie.sh/posts/phase-discovery/</guid>
+      <guid>http://localhost:1313/posts/phase-discovery/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve had a lot of thoughts as to what my game might be, and I have some interesting ideas of cool gameplay mechanics. When approaching new projects (not just in game dev) I always have a general &amp;ldquo;feeling&amp;rdquo; of what I&amp;rsquo;m trying to build. I can&amp;rsquo;t always visualize or explain the feeling, but I&amp;rsquo;d be able to tell you if I saw it.&lt;/p&gt;&#xA;&lt;p&gt;Over the past week in my evenings I&amp;rsquo;ve been looking at procedural generation in both Unity and Unreal - exploring the options available to me here. Unity&amp;rsquo;s DOTS stack is very interesting, but there are some holes in both my knowledge and their current implementation which make my goals challenging.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A rough plan</title>
-      <link>https://jamie.sh/posts/a-rough-plan/</link>
+      <link>http://localhost:1313/posts/a-rough-plan/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>https://jamie.sh/posts/a-rough-plan/</guid>
+      <guid>http://localhost:1313/posts/a-rough-plan/</guid>
       <description>&lt;p&gt;To get started, I want to first outline my goals for the foreseeable future. In my first post, I mentioned that I have limited time to spend on my game dev ambitions so it&amp;rsquo;s important that the hours I do spend are productive. I watched a &lt;a href=&#34;https://youtu.be/g5f7yixtQPc&#34;&gt;GDC talk by David Wehle&lt;/a&gt; (&lt;a href=&#34;https://www.thefirsttree.com/&#34;&gt;The First Tree&lt;/a&gt;) who mentioned he spent roughly 10 hours a week on his game, due to work commitments and real-life - and that he never had a 0% day. Every day should have &lt;em&gt;some&lt;/em&gt; progress, no matter how small. These are tenets I&amp;rsquo;d like to follow.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Game development: A beginning</title>
-      <link>https://jamie.sh/posts/game-development-a-beginning/</link>
+      <link>http://localhost:1313/posts/game-development-a-beginning/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>https://jamie.sh/posts/game-development-a-beginning/</guid>
+      <guid>http://localhost:1313/posts/game-development-a-beginning/</guid>
       <description>&lt;p&gt;When I was in my early twenties - with not much going on in my life - I decided to make a change. I remember being in my parents garden on a sunny day kicking a ball around with Ziggy, the dog. I didn&amp;rsquo;t know what I wanted to do with my life, I&amp;rsquo;d quit my job and spent most of my days sleeping and playing video games.&lt;/p&gt;&#xA;&lt;p&gt;I used my first computer at age 5, a Windows 95 machine my parents were eager to show off. Having a computer in 1995 was an expensive endeavor, and we were not from an affluent area - so this was a big deal. One of my earliest memories was waking up in the early hours to find my parents setting up the new computer, not expecting us to use it until morning.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Games that shaped me</title>
-      <link>https://jamie.sh/posts/games-that-shaped-me/</link>
+      <link>http://localhost:1313/posts/games-that-shaped-me/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>https://jamie.sh/posts/games-that-shaped-me/</guid>
-      <description>&lt;p&gt;Here are some games that I really enjoyed - they aren&amp;rsquo;t necessarily inspiration for my current project - but games that inspired me and captured my imagination (and time). I expect to add to this list over time.&lt;/p&gt;&#xA;&lt;h3 id=&#34;ecco-the-dolphin&#34;&gt;Ecco the Dolphin&lt;/h3&gt;&#xA;&lt;p&gt;One of the first games I played. Loved the feeling of diving deeper and deeper into the unknown (might be why I enjoyed Subnautica so much).&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://jamie.sh/posts/games-that-shaped-me/ecco.jpg&#34; alt=&#34;Ecco The Dolphin&#34;&gt;&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/games-that-shaped-me/</guid>
+      <description>&lt;p&gt;Here are some games that I really enjoyed - they aren&amp;rsquo;t necessarily inspiration for my current project - but games that inspired me and captured my imagination (and time). I expect to add to this list over time.&lt;/p&gt;&#xA;&lt;h3 id=&#34;ecco-the-dolphin&#34;&gt;Ecco the Dolphin&lt;/h3&gt;&#xA;&lt;p&gt;One of the first games I played. Loved the feeling of diving deeper and deeper into the unknown (might be why I enjoyed Subnautica so much).&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/posts/games-that-shaped-me/ecco.jpg&#34; alt=&#34;Ecco The Dolphin&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
