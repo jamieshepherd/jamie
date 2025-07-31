@@ -6,8 +6,15 @@
     <description>Recent content in Hi on Jamie.sh</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 17 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 31 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Everything is Cringe</title>
+      <link>http://localhost:1313/posts/everything-is-cringe/</link>
+      <pubDate>Thu, 31 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/everything-is-cringe/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/posts/everything-is-cringe/cringe.png&#34; alt=&#34;Everything is Cringe&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Believe it or not - I used to be full of optimism. I grew up in &lt;a href=&#34;https://www.google.co.uk/maps?q=,&amp;#43;Plymouth,&amp;#43;,&amp;#43;uk&#34;&gt;Plymouth, UK&lt;/a&gt; (the original one) - and it&amp;rsquo;s a very slow town. There isn’t a huge amount going on down there - the counties of Devon and Cornwall are, in England, often the places people go to retire. The average salary is £39.8k ($51.5k USD) - which was much less in around 2010 when I was sitting in my mom&amp;rsquo;s garden debating what I wanted to do with my life at age 20. I had a pretty misspent youth, but I loved computers - and I loved videogames. I&amp;rsquo;d even worked at one of the only web design agencies in the southwest of England - as an apprentice - for a huge £2/hour (£80/week).&lt;/p&gt;</description>
+    </item>
     <item>
       <title>React Router v7, Vite, and Cloudflare Workers</title>
       <link>http://localhost:1313/posts/cloudflare-workers-react-router-deployment/</link>
