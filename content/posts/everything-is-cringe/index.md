@@ -2,7 +2,7 @@
 date = '2025-07-31'
 location = 'SAN FRANCISCO, CALIFORNIA'
 title = 'Everything is Cringe'
-bsky = "https://bsky.app/profile/jamie.sh/post/3lu6rfqphs227"
+bsky = "https://bsky.app/profile/jamie.sh/post/3lvc4jstnqs2y"
 +++
 
 ![Everything is Cringe](./cringe.png)
